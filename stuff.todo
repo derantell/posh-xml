@@ -1,0 +1,14 @@
+Specs to write:
+
+  ☐ Describe remove-element
+    ☐ valid path
+    ☐ invalid path
+    ☐ existing element
+    ☐ non-existing element
+
+  ☐ Describe test-element
+    ☐ valid path
+    ☐ invalid path
+    ☐ existing element
+    ☐ non-existing element
+    
