@@ -57,5 +57,17 @@ Describe "add-element" {
             $sibling.nextsibling.localname | should be "element2"
         }
     }
+
+    Context "when specifying a list of attributes" {
+        It "should set attributes of element" {
+            $parent = get-contextnode '/root'
+
+            $element = add-element "element2" $parent `
+                -attributes @{ 'foo' = 'bar'; 'baz' = 'quux' }
+
+            $element.foo | should be 'bar'
+            $element.baz | should be 'quux'
+        }
+    }
 }
 

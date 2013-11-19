@@ -18,7 +18,7 @@ function edit-xml {
         throw "Specified file $filename is not valid XML"
     }
 
-    $node = select-xml $xpath $xml
+    $node = select-xml $xpath $xml -namespace $namespaces
 
     if( $node -ne $null ) {
         & $action $node.node

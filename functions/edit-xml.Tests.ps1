@@ -55,5 +55,24 @@ Describe "edit-xml" {
             }
         }
     }
+
+    Context "when selecting context nodes in a namespace" {
+        It "should select the specified element" {
+            $namespaces = @{ 'x' = 'http://www.example.com' }
+
+            edit-xml .\resources\namespace.xml "//x:element1" {
+                param($node)
+                $node.localname | should be 'element1'
+                $node.namespaceuri | should be 'http://www.example.com'
+            }
+        }
+
+        It "should return nothing when no namespaces are defined" {
+            edit-xml .\resources\namespace.xml "//x:element1" {
+                param($node)
+                $node | should be $null
+            }
+        }
+    }
 }
 

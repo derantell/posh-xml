@@ -11,4 +11,13 @@ Specs to write:
     ☐ invalid path
     ☐ existing element
     ☐ non-existing element
+
+  ☐ Describe use-namespace
+    ☐ Adding namespace
+
+ ☐ Describe set-element
+     ☐ sets the elemement from xml text
+
+         
+
     
